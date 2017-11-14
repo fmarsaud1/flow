@@ -54,4 +54,18 @@ var (
 	ErrInvalidContentType = &BadProtoMessage{
 		message: "Unsupported content type for datum",
 	}
+
+	// ErrMissingContentType  - no content type in datum
+	ErrMissingBlobID = &BadProtoMessage{
+		message: "Missing " + HeaderBlobID + " header ",
+	}
+
+	// ErrMissingBlobLength - missing blob length in datym
+	ErrMissingBlobLength = &BadProtoMessage{
+		message: "Missing " + HeaderBlobLength + " header ",
+	}
+	// ErrInvalidBlobLength  - no content type in datum
+	ErrInvalidBlobLength = &BadProtoMessage{
+		message: "Invalid " + HeaderBlobLength + " header ",
+	}
 )
